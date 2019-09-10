@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import home_page_view, home_page_view_with_render, form
+from .import views
 
 urlpatterns = [
     #Chemin entre l'URL et la vue.
     path('admin/', admin.site.urls),
-    path('', home_page_view, name='home'),
-    path('home_page/', home_page_view_with_render, name="home_render"),
-    path('form/', form, name='form')
+    path('', views.home_page_view, name='home'),
+    path('home_page/', views.home_page_view_with_render, name="home_render"),
+    path('form/', views.form, name='form'),
+    path('login/', views.formLogin, name='loginForm')
 ]

@@ -17,3 +17,6 @@ def form(request):
         alpha = request.POST["data"]
         print(alpha)
     return render(request, "form_page.html",{"value1":"Valeur envoyé depuis views.py"})
+
+def formLogin(request):
+    return render(request, "login.html")

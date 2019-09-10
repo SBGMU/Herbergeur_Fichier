@@ -12,6 +12,15 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+
+""" 
+
+Superuser: 
+username = stephen 
+password = stephen93 
+
+"""
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 #Chemin absolu de l'application.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -69,6 +78,8 @@ TEMPLATES = [
         },
     },
 ]
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 WSGI_APPLICATION = 'my_site.wsgi.application'
 
