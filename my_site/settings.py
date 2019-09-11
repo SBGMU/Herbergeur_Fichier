@@ -13,13 +13,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 
-""" 
-
-Superuser: 
-username = stephen 
-password = stephen93 
-
-"""
+""" Superuser: 
+username = stephen
+password = stephen93
+ """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 #Chemin absolu de l'application.
@@ -48,8 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles', 
+    'crispy_forms' 
 ]
+
+CRISPY_TEMPLATE_PACK =  'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,6 +63,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'my_site.urls'
 
+LOGIN_REDIRECT_URL = '/home_page'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

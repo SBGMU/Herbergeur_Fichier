@@ -21,3 +21,7 @@ body {
 .navbar a {
     color:black;
 }
+
+#login-card { 
+  background-color: lightblue;
+}

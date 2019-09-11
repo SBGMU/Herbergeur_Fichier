@@ -1,4 +1,26 @@
-<!DOCTYPE html>
+{% extends  'base.html' %}
+{% load crispy_forms_tags %}
+​
+{% block main %}
+<div id="login-card" class="card p-2">
+    <div class="card-body">
+        <h4 class="card-title ">Connexion</h4>
+        ​
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">
+            ​
+            {{ form|crispy }}
+            ​
+            <button type="submit" class="btn btn-dark btn-block rounded-0">Se connecter</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     {% load static %}
@@ -6,7 +28,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link  rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}"></link>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://www.amcharts.com/lib/4/core.js"></script>
@@ -14,7 +36,6 @@
     <script src="https://www.amcharts.com/lib/4/themes/dataviz.js"></script>
     <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="{% static 'js/chart.js' %}"></script>
 </head>
 
 <nav class="navbar">
@@ -25,12 +46,16 @@
             <div class="form-group w-100 p-3">
                 <label for="formGroupExampleInput">Nom d'utilisateur</label>
                 <input type="text" class="form-control rounded-0 w-100  " id="formGroupExampleInput" name="username" placeholder="Saisissez votre nom d'utlisateur...">
-                    <input type="submit" class="btn btn-dark btn-success float-right mt-4 rounded-0" value="Envoyer">
+                
+                
             </div>
         </form>
-    </div>
+        
+    </div> -->
 
     
+
+
     <div class="mt-3 w-50 center border border-primary mx-auto" id="chartdiv"></div>
 
 

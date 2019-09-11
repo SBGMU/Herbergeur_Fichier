@@ -8,7 +8,7 @@ alert("It works !!");
         am4core.useTheme(am4themes_animated);
         // Themes end
         
-        var availableCountries = ["US", "SS", "NZ", "LT", "LU", "MK", "MG", "MW", "MY", "ML", "MR", "MX", "MD", "MN", "ME", "MA", "MZ", "NA", "NP", "NL", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "KR", "JO", "KZ", "KE", "KP", "JP", "IT", "JM", "IL", "IR", "IQ", "IE", "ID", "IN", "HN", "HU", "IS", "HT", "ER", "EE", "ET", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GL", "GQ", "EC", "EG", "SV", "DJ", "DK", "CZ", "CY", "CU", "HR", "CI", "CR", "CG", "CD", "CO", "CN", "CL", "TD", "CF", "CA", "KH", "CM", "BI", "MM", "BF", "BG", "BR", "BW", "BA", "BO", "BT", "BJ", "BZ", "BE", "BY", "AM", "AZ", "BD", "AT", "AU", "AR", "AO", "DZ", "AL", "GT", "GN", "GW", "GY", "NI", "NE", "NG", "NO", "OM", "PK", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "PR", "RO", "RU", "RW", "SA", "SN", "RS", "SL", "SK", "SI", "SO", "ZA", "ES", "LK", "SD", "SR", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TN", "TR", "TM", "UG", "UA", "AE", "GB", "UY", "UZ", "VE", "VN", "YE", "ZM", "ZW"];
+        var availableCountries = ["GH", "CG", "NG"];
         
         var selectedPolygon;
         var userCountryId;

@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth import views as auth_views
 
 from .import views
 
@@ -24,5 +25,6 @@ urlpatterns = [
     path('', views.home_page_view, name='home'),
     path('home_page/', views.home_page_view_with_render, name="home_render"),
     path('form/', views.form, name='form'),
-    path('login/', views.formLogin, name='loginForm')
+    path('login/', auth_views.LoginView.as_view(), name='login'), 
+    path('logout/', auth_views.LogoutView.as_view(), name='logout')
 ]
