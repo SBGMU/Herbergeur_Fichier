@@ -14,8 +14,8 @@ import os
 
 
 """ Superuser: 
-username = stephen
-password = stephen93
+username = 'stephen'
+password = 'stephen93'
  """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles', 
-    'crispy_forms' 
+    'crispy_forms',
+    'djongo',
 ]
 
 CRISPY_TEMPLATE_PACK =  'bootstrap4'
@@ -90,8 +91,11 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'WeHostDB',
+        'USER': 'WeHostStephen',
+        'PASSWORD': 'stephen93',
+        'HOST': 'mongodb+srv://WeHostStephen:stephen93@wehostdb-fsq1x.mongodb.net/test?retryWrites=true&w=majority',
     }
 }
 

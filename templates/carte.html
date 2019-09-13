@@ -1,0 +1,53 @@
+{% extends  'base.html' %}
+{% block main %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WeHost</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>WeHost</h1>
+        <p>---</p>
+    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="test">
+        <a class="navbar-brand" href="#">
+            <i class="far fa-file-word"></i>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav w-100">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'home_render' %}">Accueil</a>
+                        <a class="dropdown-item" href="{% url 'carte' %}">Les pays d'opérations</a>
+                        <a class="dropdown-item" href="#">Loi Géométrique</a>
+                    </div>
+                </li>
+                <a type="button" class="btn btn-danger rounded-0 justify-content-end " href="{% url 'logout' %}">
+                    <i class="fas fa-power-off"></i> Deconnexion
+                </a>
+            </ul>
+        </div>
+    </nav>
+    
+    <div id="chartdiv" class="bg-dark w-50 m-4 mx-auto"></div>
+
+{% endblock %}

@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
-{% block main %}
 ​
-<div class="card p-5">
+{% block main %}
+<div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>WeHost</h1>
+        <p>---</p>
+    </div>
+
+<div class="card mt-2 p-5 w-25 mx-auto">
     <p>Vous êtes déconnecté !</p>
     <a type="button" class="btn btn-dark rounded-0" href="{% url 'login' %}">Se connecter</a>
 </div>

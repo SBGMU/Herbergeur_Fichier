@@ -1,33 +1,28 @@
+{% extends  'base.html' %}
+{% block main %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <title>WeHost</title>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"> 
-<style>
-
- .fakeimg {
-   height: 200px;
-   background: #aaa;
- }
- </style>
-
-
+  <title>WeHost</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"> 
 </head>
+
 <body>
-<div class="jumbotron text-center" style="margin-bottom:0">
- <h1>WeHost</h1>
- <p>---</p>
-</div>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="test">
- <a class="navbar-brand" href="#">
-  <i class="far fa-file-word"></i>
- </a>
+  <div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>WeHost</h1>
+  <p>---</p>
+  </div>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="test">
+  <a class="navbar-brand" href="#">
+    <i class="far fa-file-word"></i>
+  </a>
 
  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
    <span class="navbar-toggler-icon"></span>
@@ -36,11 +31,11 @@
    <ul class="navbar-nav w-100">
      <li class="nav-item dropdown">
        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-         Probabilités
+         Menu
        </a>
        <div class="dropdown-menu">
-         <a class="dropdown-item" href="#">Loi de Bernouilli</a>
-         <a class="dropdown-item" href="#">Loi Binomiale</a>
+         <a class="dropdown-item" href="{% url 'home_render' %}">Accueil</a>
+         <a class="dropdown-item" href="{% url 'carte' %}">Les pays d'opérations</a>
          <a class="dropdown-item" href="#">Loi Géométrique</a>
        </div>
      </li>
@@ -50,24 +45,37 @@
    </ul>
  </div>
 </nav>
+
+<div class="card bg-dark p-2 m-4 w-25 text-light rounded-0">Bienvenue !</div>
+
 <div class="container" style="margin-top:30px">
  <div class="row">
    <div class="col-sm-5 mx-auto">
      <div class="card mb-3 p-4">       
       <div class="custom-file mt-3 mb-3">
-      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-      <label class="custom-file-label" for="validatedCustomFile">Charger un fichier...</label>
-      <div class="invalid-feedback">Fichier invalide</div>
+        {% csrf_token %}
+        <!-- <form method="POST" class="post-form" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="save btn btn-default">Enregistrer</button> -->
+          <a href="https://audreytips.com/wp-content/uploads/2016/11/hebergement-de-sites-web-pour-les-entreprises-3.jpg" download>
+              <i class="fas fa-file-image"></i>
+          </a>
+          <a href="https://audreytips.com/wp-content/uploads/2016/03/comment-mieux-choisir-votre-hebergement-web-1.jpg" download>
+              <i class="fas fa-file-image"></i>
+          </a>
+        </form>
     </div>
-    <input type="submit" class="btn btn-dark btn-success float-right mt-4 rounded-0" value="Envoyer">
   </div>
    </div>
      
-     <br>
- </div>
-</div>
-<div class="jumbotron text-center" style="margin-bottom:0">
- <p>Footer</p>
-</div>
+  </div>
+  </div>
+  <div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Footer</p>
+  </div>
 </body>
+
 </html>
+
+{% endblock %}

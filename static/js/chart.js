@@ -1,6 +1,3 @@
-alert("It works !!");
-    
-
         am4core.ready(function() {
 
             // Themes begin
@@ -8,7 +5,7 @@ alert("It works !!");
         am4core.useTheme(am4themes_animated);
         // Themes end
         
-        var availableCountries = ["GH", "CG", "NG"];
+        var availableCountries = ["GH", "CG", "NG", "FR", "US"];
         
         var selectedPolygon;
         var userCountryId;
